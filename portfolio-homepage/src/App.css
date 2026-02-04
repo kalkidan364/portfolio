@@ -1,0 +1,434 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0a0a0a;
+  --text-primary: #eeeeee;
+  --text-muted: #9ca3af;
+  --accent: #a855f7;
+  --accent-secondary: #06b6d4;
+  --accent-tertiary: #f59e0b;
+}
+
+body {
+  font-family: 'Exo 2', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Horizontal Scroll Container */
+.horizontal-scroll-container {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.horizontal-scroll-wrapper {
+  display: flex;
+  height: 100vh;
+  width: fit-content;
+}
+
+.horizontal-scroll-wrapper > section {
+  min-width: 100vw;
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  overflow-y: auto;
+}
+
+/* Custom Scrollbar for Horizontal Scroll */
+.horizontal-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar-track {
+  background: rgba(15, 15, 15, 0.5);
+}
+
+.horizontal-scroll-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #a855f7, #06b6d4);
+  border-radius: 4px;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #9333ea, #0891b2);
+}
+
+/* Ultra-unique typography for the name */
+.name-typography-unique {
+  font-family: 'Orbitron', monospace;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  font-feature-settings: 'kern' 1, 'liga' 1;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* Alternative unique fonts for different feels */
+.name-futuristic {
+  font-family: 'Audiowide', cursive;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.name-tech {
+  font-family: 'Michroma', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.name-sleek {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* Advanced name animations with 3D effects */
+.name-letter-advanced {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100px) rotateX(90deg) rotateZ(45deg) scale(0.3);
+  animation: letterRevealAdvanced 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  text-shadow: 
+    0 0 20px rgba(168, 85, 247, 0.5),
+    0 4px 8px rgba(0, 0, 0, 0.8),
+    0 8px 16px rgba(168, 85, 247, 0.2);
+  position: relative;
+  filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.3));
+}
+
+@keyframes letterRevealAdvanced {
+  0% {
+    opacity: 0;
+    transform: translateY(100px) rotateX(90deg) rotateZ(45deg) scale(0.3);
+    filter: blur(20px) hue-rotate(180deg);
+  }
+  25% {
+    opacity: 0.3;
+    transform: translateY(50px) rotateX(45deg) rotateZ(22deg) scale(0.6);
+    filter: blur(10px) hue-rotate(90deg);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateY(-20px) rotateX(-10deg) rotateZ(-5deg) scale(1.2);
+    filter: blur(5px) hue-rotate(45deg);
+  }
+  75% {
+    opacity: 0.9;
+    transform: translateY(-10px) rotateX(5deg) rotateZ(2deg) scale(1.05);
+    filter: blur(2px) hue-rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg) rotateZ(0deg) scale(1);
+    filter: blur(0px) hue-rotate(0deg);
+  }
+}
+
+/* Ultra-special last name animation with gradient morphing */
+.lastname-letter-advanced {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(80px) scale(0.2) rotateY(180deg);
+  animation: lastnameRevealAdvanced 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  background: linear-gradient(45deg, #a855f7, #06b6d4, #f59e0b, #ef4444);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation-fill-mode: forwards;
+  position: relative;
+}
+
+@keyframes lastnameRevealAdvanced {
+  0% {
+    opacity: 0;
+    transform: translateY(80px) scale(0.2) rotateY(180deg) rotateX(90deg);
+    filter: blur(20px) brightness(0.3);
+    background-position: 0% 50%;
+  }
+  20% {
+    opacity: 0.4;
+    transform: translateY(40px) scale(0.5) rotateY(90deg) rotateX(45deg);
+    filter: blur(15px) brightness(0.6);
+    background-position: 25% 50%;
+  }
+  40% {
+    opacity: 0.6;
+    transform: translateY(-30px) scale(1.3) rotateY(45deg) rotateX(0deg);
+    filter: blur(8px) brightness(0.8);
+    background-position: 50% 50%;
+  }
+  60% {
+    opacity: 0.8;
+    transform: translateY(-15px) scale(1.1) rotateY(0deg) rotateX(-10deg);
+    filter: blur(4px) brightness(1);
+    background-position: 75% 50%;
+  }
+  80% {
+    opacity: 0.95;
+    transform: translateY(-5px) scale(1.02) rotateY(0deg) rotateX(0deg);
+    filter: blur(1px) brightness(1.1);
+    background-position: 90% 50%;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotateY(0deg) rotateX(0deg);
+    filter: blur(0px) brightness(1.2);
+    background-position: 100% 50%;
+  }
+}
+
+/* Continuous gradient animation for last name */
+.lastname-letter-advanced::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, #a855f7, #06b6d4, #f59e0b, #ef4444);
+  background-size: 400% 400%;
+  animation: gradientShift 3s ease-in-out infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  z-index: -1;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  25% { background-position: 100% 50%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
+}
+
+/* Enhanced hover effects with particle-like animations */
+.name-hover:hover .name-letter-advanced {
+  animation: letterHoverAdvanced 0.8s ease-in-out infinite alternate;
+}
+
+.name-hover:hover .lastname-letter-advanced {
+  animation: lastnameHoverAdvanced 1s ease-in-out infinite alternate;
+}
+
+@keyframes letterHoverAdvanced {
+  0% { 
+    transform: translateY(0) scale(1) rotateZ(0deg);
+    text-shadow: 
+      0 0 20px rgba(168, 85, 247, 0.5),
+      0 4px 8px rgba(0, 0, 0, 0.8);
+  }
+  100% { 
+    transform: translateY(-15px) scale(1.08) rotateZ(2deg);
+    text-shadow: 
+      0 0 30px rgba(168, 85, 247, 0.8),
+      0 0 50px rgba(168, 85, 247, 0.4),
+      0 8px 16px rgba(0, 0, 0, 0.6);
+  }
+}
+
+@keyframes lastnameHoverAdvanced {
+  0% { 
+    transform: scale(1) rotateY(0deg);
+    filter: brightness(1.2) saturate(1);
+  }
+  100% { 
+    transform: scale(1.05) rotateY(5deg);
+    filter: brightness(1.5) saturate(1.3);
+  }
+}
+
+/* Floating background orbs - ENHANCED VISIBILITY */
+.floating-orb {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.4), rgba(168, 85, 247, 0.1), transparent);
+  animation: floatOrb 8s ease-in-out infinite;
+  pointer-events: none;
+  filter: blur(60px);
+  box-shadow: 0 0 100px rgba(168, 85, 247, 0.5);
+}
+
+.floating-orb-1 {
+  width: 400px;
+  height: 400px;
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.floating-orb-2 {
+  width: 350px;
+  height: 350px;
+  top: 60%;
+  right: 15%;
+  animation-delay: 2s;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.4), rgba(6, 182, 212, 0.1), transparent);
+  box-shadow: 0 0 100px rgba(6, 182, 212, 0.5);
+}
+
+.floating-orb-3 {
+  width: 300px;
+  height: 300px;
+  bottom: 20%;
+  left: 70%;
+  animation-delay: 4s;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.4), rgba(245, 158, 11, 0.1), transparent);
+  box-shadow: 0 0 100px rgba(245, 158, 11, 0.5);
+}
+
+@keyframes floatOrb {
+  0%, 100% { transform: translateY(0px) translateX(0px) scale(1); opacity: 0.8; }
+  25% { transform: translateY(-50px) translateX(30px) scale(1.2); opacity: 1; }
+  50% { transform: translateY(-80px) translateX(-20px) scale(0.9); opacity: 0.9; }
+  75% { transform: translateY(-30px) translateX(-40px) scale(1.1); opacity: 0.95; }
+}
+
+/* Role text styling */
+.role-container {
+  position: relative;
+  display: inline-block;
+}
+
+.role-text {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #9ca3af;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+
+.role-underline {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #a855f7, #06b6d4);
+  transform: scaleX(0);
+  animation: underlineGrow 1s ease-out 2.5s forwards;
+}
+
+@keyframes underlineGrow {
+  to { transform: scaleX(1); }
+}
+
+/* Accent dots */
+.accent-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: dotPulse 2s ease-in-out infinite;
+}
+
+.accent-dot-1 {
+  background: #a855f7;
+  animation-delay: 0s;
+}
+
+.accent-dot-2 {
+  background: #06b6d4;
+  animation-delay: 0.3s;
+}
+
+.accent-dot-3 {
+  background: #f59e0b;
+  animation-delay: 0.6s;
+}
+
+@keyframes dotPulse {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.5); opacity: 1; }
+}
+
+/* Decorative elements */
+.name-decoration {
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #a855f7, transparent);
+  top: 50%;
+  animation: decorationGlow 3s ease-in-out infinite;
+}
+
+.name-decoration-left {
+  left: -60px;
+  animation-delay: 3s;
+}
+
+.name-decoration-right {
+  right: -60px;
+  animation-delay: 3.5s;
+}
+
+@keyframes decorationGlow {
+  0%, 100% { opacity: 0; transform: scaleX(0); }
+  50% { opacity: 1; transform: scaleX(1); }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .name-letter-advanced,
+  .lastname-letter-advanced,
+  .floating-orb,
+  .role-underline,
+  .accent-dot,
+  .name-decoration {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .name-typography-unique {
+    font-size: 3rem;
+    line-height: 1.1;
+  }
+  
+  .floating-orb {
+    display: none;
+  }
+  
+  .name-decoration {
+    display: none;
+  }
+}
