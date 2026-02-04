@@ -1,16 +1,92 @@
-# React + Vite
+# Portfolio Homepage
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React and Vite.
 
-Currently, two official plugins are available:
+## 🚀 Quick Start
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Development
 
-## React Compiler
+```bash
+# Install dependencies
+npm install
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Start development server
+npm run dev
 
-## Expanding the ESLint configuration
+# Run tests
+npm test
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Build for production
+npm run build
+
+# Preview production build
+npm preview
+```
+
+## 📦 Deployment
+
+This project is ready for deployment on Vercel!
+
+### Deploy to Vercel (Recommended)
+
+1. Push your code to GitHub
+2. Visit [vercel.com/new](https://vercel.com/new)
+3. Import your repository
+4. Set Root Directory to: `portfolio-homepage`
+5. Click Deploy
+
+**For detailed deployment instructions, see [DEPLOYMENT.md](../DEPLOYMENT.md)**
+
+## 🛠️ Tech Stack
+
+- **React 19** - UI library
+- **Vite** - Build tool and dev server
+- **Tailwind CSS** - Utility-first CSS framework
+- **Framer Motion** - Animation library
+- **Jest** - Testing framework
+
+## 📁 Project Structure
+
+```
+portfolio-homepage/
+├── src/
+│   ├── components/     # React components
+│   ├── hooks/          # Custom React hooks
+│   ├── utils/          # Utility functions
+│   └── assets/         # Images and static files
+├── public/             # Public static files
+└── dist/               # Production build (generated)
+```
+
+## 🧪 Testing
+
+```bash
+# Run tests
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Generate coverage report
+npm run test:coverage
+```
+
+## 📝 Configuration Files
+
+- `vite.config.js` - Vite configuration
+- `tailwind.config.js` - Tailwind CSS configuration
+- `vercel.json` - Vercel deployment configuration
+- `jest.config.js` - Jest testing configuration
+
+## 🌐 Browser Support
+
+- Modern browsers (Chrome, Firefox, Safari, Edge)
+- Mobile responsive design
+
+## 📄 License
+
+Private project
+
+---
+
+**Ready to deploy?** See [VERCEL_READY.md](../VERCEL_READY.md) for deployment checklist.
