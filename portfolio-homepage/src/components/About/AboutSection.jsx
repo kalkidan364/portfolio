@@ -59,19 +59,19 @@ const AboutSection = () => {
       </div>
 
       <motion.div 
-        className="relative z-10 max-w-7xl mx-auto px-6 py-20"
+        className="relative z-10 max-w-7xl mx-auto px-6 py-12"
         style={{ opacity }}
       >
         {/* Section Title */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-10"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           <motion.h1 
-            className="text-5xl md:text-6xl font-bold mb-4"
+            className="text-3xl md:text-4xl font-bold mb-3"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -94,19 +94,19 @@ const AboutSection = () => {
 
         {/* Hero Header with 3D Effect */}
         <motion.div
-          className="text-center mb-20"
+          className="text-center mb-12"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
           <motion.div
-            className="inline-block mb-8 relative"
+            className="inline-block mb-5 relative"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
             {/* Profile Image with Advanced Effects */}
-            <div className="relative w-48 h-48 mx-auto">
+            <div className="relative w-32 h-32 mx-auto">
               {/* Rotating Border */}
               <motion.div
                 className="absolute inset-0 rounded-full"
@@ -142,7 +142,7 @@ const AboutSection = () => {
           </motion.div>
 
           <motion.h2 
-            className="text-6xl md:text-7xl font-bold mb-6 relative"
+            className="text-4xl md:text-5xl font-bold mb-4 relative"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -154,21 +154,21 @@ const AboutSection = () => {
           </motion.h2>
           
           <motion.div
-            className="flex items-center justify-center gap-4 mb-6"
+            className="flex items-center justify-center gap-3 mb-4"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
           >
-            <div className="h-px w-12 bg-gradient-to-r from-transparent to-purple-400" />
-            <p className="text-2xl text-gray-400 font-light tracking-wider">
+            <div className="h-px w-10 bg-gradient-to-r from-transparent to-purple-400" />
+            <p className="text-lg text-gray-400 font-light tracking-wider">
               Software Engineer
             </p>
-            <div className="h-px w-12 bg-gradient-to-l from-transparent to-cyan-400" />
+            <div className="h-px w-10 bg-gradient-to-l from-transparent to-cyan-400" />
           </motion.div>
 
           <motion.p 
-            className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed"
+            className="text-base text-gray-300 max-w-2xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -179,7 +179,7 @@ const AboutSection = () => {
         </motion.div>
 
         {/* Bento Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
           
           {/* Card 1: Working Assumptions - Large */}
           <motion.div
@@ -189,7 +189,7 @@ const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            <div className="relative h-full p-8 rounded-3xl bg-gradient-to-br from-purple-900/20 to-purple-600/10 border border-purple-500/20 backdrop-blur-xl overflow-hidden hover:border-purple-500/40 transition-all duration-500">
+            <div className="relative h-full p-5 rounded-2xl bg-gradient-to-br from-purple-900/20 to-purple-600/10 border border-purple-500/20 backdrop-blur-xl overflow-hidden hover:border-purple-500/40 transition-all duration-500">
               {/* Animated Background */}
               <motion.div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -199,18 +199,18 @@ const AboutSection = () => {
               />
               
               <div className="relative z-10">
-                <div className="flex items-center gap-3 mb-6">
+                <div className="flex items-center gap-2 mb-4">
                   <motion.div
-                    className="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center"
+                    className="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center"
                     whileHover={{ rotate: 360, scale: 1.1 }}
                     transition={{ duration: 0.6 }}
                   >
-                    <span className="text-2xl">💡</span>
+                    <span className="text-xl">💡</span>
                   </motion.div>
-                  <h3 className="text-2xl font-bold text-purple-400">Working Assumptions</h3>
+                  <h3 className="text-lg font-bold text-purple-400">Working Assumptions</h3>
                 </div>
                 
-                <div className="space-y-4">
+                <div className="space-y-3">
                   {[
                     'Code should explain itself',
                     'Simplicity beats flexibility by default',
@@ -230,7 +230,7 @@ const AboutSection = () => {
                         className="mt-2 w-2 h-2 rounded-full bg-purple-400"
                         whileHover={{ scale: 1.5 }}
                       />
-                      <p className="text-gray-300 text-lg leading-relaxed group-hover/item:text-white transition-colors">
+                      <p className="text-gray-300 text-sm leading-relaxed group-hover/item:text-white transition-colors">
                         {item}
                       </p>
                     </motion.div>
@@ -248,7 +248,7 @@ const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <div className="relative h-full p-8 rounded-3xl bg-gradient-to-br from-cyan-900/20 to-cyan-600/10 border border-cyan-500/20 backdrop-blur-xl overflow-hidden hover:border-cyan-500/40 transition-all duration-500">
+            <div className="relative h-full p-5 rounded-2xl bg-gradient-to-br from-cyan-900/20 to-cyan-600/10 border border-cyan-500/20 backdrop-blur-xl overflow-hidden hover:border-cyan-500/40 transition-all duration-500">
               <motion.div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 style={{
@@ -257,22 +257,22 @@ const AboutSection = () => {
               />
               
               <div className="relative z-10">
-                <div className="flex items-center gap-3 mb-6">
+                <div className="flex items-center gap-2 mb-4">
                   <motion.div
-                    className="w-12 h-12 rounded-xl bg-cyan-500/20 flex items-center justify-center"
+                    className="w-10 h-10 rounded-xl bg-cyan-500/20 flex items-center justify-center"
                     whileHover={{ rotate: 360, scale: 1.1 }}
                     transition={{ duration: 0.6 }}
                   >
-                    <span className="text-2xl">🛠️</span>
+                    <span className="text-xl">🛠️</span>
                   </motion.div>
-                  <h3 className="text-2xl font-bold text-cyan-400">Tech Stack</h3>
+                  <h3 className="text-lg font-bold text-cyan-400">Tech Stack</h3>
                 </div>
                 
                 <div className="flex flex-wrap gap-2">
-                  {['JavaScript', 'React', 'TypeScript', 'Node.js', 'Python', 'Databases'].map((tech, i) => (
+                  {['JavaScript', 'React', 'Tailwind', 'Node.js', 'Express', 'Databases'].map((tech, i) => (
                     <motion.span
                       key={i}
-                      className="px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-sm font-medium"
+                      className="px-3 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-medium"
                       initial={{ opacity: 0, scale: 0 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
@@ -295,7 +295,7 @@ const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
           >
-            <div className="relative h-full p-8 rounded-3xl bg-gradient-to-br from-pink-900/20 to-pink-600/10 border border-pink-500/20 backdrop-blur-xl overflow-hidden hover:border-pink-500/40 transition-all duration-500">
+            <div className="relative h-full p-5 rounded-2xl bg-gradient-to-br from-pink-900/20 to-pink-600/10 border border-pink-500/20 backdrop-blur-xl overflow-hidden hover:border-pink-500/40 transition-all duration-500">
               <motion.div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 style={{
@@ -304,15 +304,15 @@ const AboutSection = () => {
               />
               
               <div className="relative z-10">
-                <div className="flex items-center gap-3 mb-6">
+                <div className="flex items-center gap-2 mb-4">
                   <motion.div
-                    className="w-12 h-12 rounded-xl bg-pink-500/20 flex items-center justify-center"
+                    className="w-10 h-10 rounded-xl bg-pink-500/20 flex items-center justify-center"
                     whileHover={{ rotate: 360, scale: 1.1 }}
                     transition={{ duration: 0.6 }}
                   >
-                    <span className="text-2xl">🚫</span>
+                    <span className="text-xl">🚫</span>
                   </motion.div>
-                  <h3 className="text-2xl font-bold text-pink-400">No Longer Do</h3>
+                  <h3 className="text-lg font-bold text-pink-400">No Longer Do</h3>
                 </div>
                 
                 <div className="space-y-3">
@@ -353,7 +353,7 @@ const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
           >
-            <div className="relative h-full p-8 rounded-3xl bg-gradient-to-br from-orange-900/20 to-orange-600/10 border border-orange-500/20 backdrop-blur-xl overflow-hidden hover:border-orange-500/40 transition-all duration-500">
+            <div className="relative h-full p-5 rounded-2xl bg-gradient-to-br from-orange-900/20 to-orange-600/10 border border-orange-500/20 backdrop-blur-xl overflow-hidden hover:border-orange-500/40 transition-all duration-500">
               <motion.div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 style={{
@@ -362,18 +362,18 @@ const AboutSection = () => {
               />
               
               <div className="relative z-10">
-                <div className="flex items-center gap-3 mb-6">
+                <div className="flex items-center gap-2 mb-4">
                   <motion.div
-                    className="w-12 h-12 rounded-xl bg-orange-500/20 flex items-center justify-center"
+                    className="w-10 h-10 rounded-xl bg-orange-500/20 flex items-center justify-center"
                     whileHover={{ rotate: 360, scale: 1.1 }}
                     transition={{ duration: 0.6 }}
                   >
-                    <span className="text-2xl">⚠️</span>
+                    <span className="text-xl">⚠️</span>
                   </motion.div>
-                  <h3 className="text-2xl font-bold text-orange-400">Common Project Issues</h3>
+                  <h3 className="text-lg font-bold text-orange-400">Common Project Issues</h3>
                 </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {[
                     'Requirements change mid-build',
                     'Code ownership becomes unclear',
@@ -411,7 +411,7 @@ const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.5 }}
           >
-            <div className="relative h-full p-8 rounded-3xl bg-gradient-to-br from-emerald-900/20 to-emerald-600/10 border border-emerald-500/20 backdrop-blur-xl overflow-hidden hover:border-emerald-500/40 transition-all duration-500">
+            <div className="relative h-full p-5 rounded-2xl bg-gradient-to-br from-emerald-900/20 to-emerald-600/10 border border-emerald-500/20 backdrop-blur-xl overflow-hidden hover:border-emerald-500/40 transition-all duration-500">
               <motion.div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 style={{
@@ -420,15 +420,15 @@ const AboutSection = () => {
               />
               
               <div className="relative z-10">
-                <div className="flex items-center gap-3 mb-6">
+                <div className="flex items-center gap-2 mb-4">
                   <motion.div
-                    className="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center"
+                    className="w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center"
                     whileHover={{ rotate: 360, scale: 1.1 }}
                     transition={{ duration: 0.6 }}
                   >
-                    <span className="text-2xl">📖</span>
+                    <span className="text-xl">📖</span>
                   </motion.div>
-                  <h3 className="text-2xl font-bold text-emerald-400">Code Reading</h3>
+                  <h3 className="text-lg font-bold text-emerald-400">Code Reading</h3>
                 </div>
                 
                 <div className="space-y-3">
@@ -464,17 +464,17 @@ const AboutSection = () => {
 
         {/* Technical Expertise - Full Width Showcase */}
         <motion.div
-          className="mb-12"
+          className="mb-8"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.6 }}
         >
-          <h3 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+          <h3 className="text-2xl font-bold text-center mb-8 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
             Technical Expertise
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
               { name: 'Frontend Development', level: 95, icon: '⚛️' },
               { name: 'Backend Architecture', level: 88, icon: '🔧' },
@@ -483,7 +483,7 @@ const AboutSection = () => {
             ].map((skill, index) => (
               <motion.div
                 key={skill.name}
-                className="group relative p-6 rounded-2xl bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl overflow-hidden"
+                className="group relative p-4 rounded-xl bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl overflow-hidden"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -491,19 +491,19 @@ const AboutSection = () => {
                 whileHover={{ scale: 1.02, borderColor: 'rgba(168, 85, 247, 0.5)' }}
               >
                 <div className="relative z-10">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-4">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-3">
                       <motion.span 
-                        className="text-4xl"
+                        className="text-2xl"
                         whileHover={{ scale: 1.2, rotate: 360 }}
                         transition={{ duration: 0.6 }}
                       >
                         {skill.icon}
                       </motion.span>
-                      <span className="text-xl font-semibold text-white">{skill.name}</span>
+                      <span className="text-base font-semibold text-white">{skill.name}</span>
                     </div>
                     <motion.span
-                      className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"
+                      className="text-xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"
                       initial={{ opacity: 0, scale: 0 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
@@ -514,7 +514,7 @@ const AboutSection = () => {
                   </div>
                   
                   {/* Progress Bar */}
-                  <div className="relative h-3 bg-gray-800 rounded-full overflow-hidden">
+                  <div className="relative h-2 bg-gray-800 rounded-full overflow-hidden">
                     <motion.div
                       className="absolute inset-y-0 left-0 rounded-full"
                       style={{
@@ -545,13 +545,13 @@ const AboutSection = () => {
 
         {/* Closing Statement */}
         <motion.div
-          className="text-center pt-12 border-t border-gray-800"
+          className="text-center pt-8 border-t border-gray-800"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.7 }}
         >
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-400 text-base">
             This page explains how I think. My work shows what I build.
           </p>
         </motion.div>

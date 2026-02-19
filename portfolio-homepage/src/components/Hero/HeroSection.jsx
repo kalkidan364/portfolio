@@ -20,7 +20,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="floating-orb floating-orb-1"></div>
@@ -33,12 +33,12 @@ const HeroSection = () => {
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="absolute top-8 left-8 z-20"
+        className="absolute top-4 left-4 z-20"
       >
         <motion.img 
           src={logo} 
           alt="Logo" 
-          className="w-16 h-16 md:w-20 md:h-20 object-contain mix-blend-screen"
+          className="w-12 h-12 md:w-14 md:h-14 object-contain mix-blend-screen"
           style={{ 
             filter: 'brightness(1.2) contrast(1.1)',
             backgroundColor: 'transparent'
@@ -52,9 +52,9 @@ const HeroSection = () => {
 
         {/* Name - Centerpiece with Ultra-Enhanced Dynamics */}
         <div className={`name-hover ${animationComplete ? 'animation-complete' : ''}`}>
-          <h1 className="text-6xl md:text-8xl lg:text-9xl name-typography-unique text-white leading-tight tracking-tight relative">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl name-typography-unique text-white leading-tight tracking-tight relative">
             {/* First Name - Advanced letter by letter animation */}
-            <span className="inline-block mr-4 md:mr-8 first-name-container">
+            <span className="inline-block mr-2 md:mr-4 first-name-container">
               {firstName.map((letter, index) => (
                 <span
                   key={`first-${index}`}
@@ -96,7 +96,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ delay: 1.8, duration: 1, ease: "easeOut" }}
-          className="mt-6 md:mt-8"
+          className="mt-4 md:mt-5"
         >
           <div className="role-badge-container">
             {/* Animated background glow */}
@@ -149,7 +149,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2.2, duration: 0.8 }}
-          className="mt-6 flex justify-center space-x-2"
+          className="mt-4 flex justify-center space-x-2"
         >
           <div className="accent-dot accent-dot-1"></div>
           <div className="accent-dot accent-dot-2"></div>
